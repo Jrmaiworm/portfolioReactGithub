@@ -17,8 +17,9 @@ const[search, setSearch]=useState('');
 async function getUserData(){
 try{
 const response = await client.get(`/${search}`);
+const repos = await client.get(`/${search}/repos`)
 ctx.setUserData(response.data);
-
+ctx.setRepos(repos.data)
 }catch(err){
 console.log(err);
 

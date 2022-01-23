@@ -1,8 +1,21 @@
-const Repos = props => (
+import React, {useContext} from "react";
+import Container from "../components/container";
+import ReposContainer from "../components/reposContainer";
 
-<h1>repos</h1>
+import {context} from "../context";
 
-);export default Repos;
+
+const Repos = props =>{
+    const ctx =useContext(context);
+    
+    
+    return (
+   <Container>
+       <ReposContainer  name={ctx.userData.name} repos={ctx.repos} />
+   </Container>
+
+
+)};export default Repos;
 
 
 

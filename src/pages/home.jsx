@@ -14,9 +14,13 @@ export default function Home() {
         <Container>
             <Header />
             <UserContainer>
+                {ctx.userData?.name ?
+                <React.Fragment>
                 <UserPicture url={ctx.userData?.avatar_url} alternativeText ={ctx.userData?.login}  />
                 <Userdetails name={ctx.userData?.name} login={ctx.userData?.login} bio={ctx.userData?.bio}  />
-                <UserNumber repo={ctx.userData?.public_repos} followers={ctx.userData?.followers} following={ctx.userData?.following}/>
+                <UserNumber repo={ctx.userData?.public_repos} followers={ctx.userData?.followers} following={ctx.userData?.following}/>                
+                </React.Fragment>
+                : undefined }
             </UserContainer>
         </Container>
     );
