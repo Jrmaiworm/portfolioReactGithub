@@ -1,3 +1,4 @@
+import Repos from './pages/repos';
 import React from 'react';
 import {
     BrowserRouter as BRouter,
@@ -11,6 +12,7 @@ const Routes = () => (
     <BRouter>
         <Switch>
             <Route path="/" exact component={ Home } />
+            <Route path="/repos" component={ Repos } />
         </Switch>
     </BRouter>
 );

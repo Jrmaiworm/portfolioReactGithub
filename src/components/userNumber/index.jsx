@@ -6,16 +6,16 @@ NumberContainer
 }from "./styles"
 
 const UserNumber = props =>{
-    const history= useHistory;
-    const handleOnclick = route => history.push(route);
-
-    // function handleOnclick(route){
+    const history = useHistory();
+    const handleOnClick = route => history.push(route);
+    
+    // function handleOnClick(route){
     //   return( history.push(route)); 
     // }
 
     return(
 <Container>
-    <NumberContainer onClick={()=>handleOnclick('/repos')} >
+    <NumberContainer onClick={()=>handleOnClick('/repos')} >
         <h1>{props?.repo}</h1>
         <h2>Repositórios</h2>
     </NumberContainer>
